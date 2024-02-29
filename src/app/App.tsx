@@ -1,9 +1,7 @@
-import React from 'react';
-import { ReactECharts } from '../Echarts/ReactECharts';
 import MainPage from 'pages/MainPage/UI/MainPage';
-
+import "./styles/index.scss"
 function App() {
-  return <div>
+  return <div className="app">
     <MainPage />
   </div>;
 }

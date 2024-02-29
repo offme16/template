@@ -3,6 +3,7 @@ interface DataItem {
     value: number;
     month: string;
     indicator: string;
+    
 }
 
 export interface CurrencySchema {
