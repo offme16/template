@@ -7,7 +7,6 @@ interface KnownError {
     message: string;
     description: string;
 }
-
 export const getCurrency = createAsyncThunk(
     'get_currency',
     async () => {
