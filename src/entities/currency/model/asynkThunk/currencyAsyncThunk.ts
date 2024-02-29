@@ -19,7 +19,7 @@ export const getCurrency = createAsyncThunk(
             return response.data;
         } catch (e) {
             const error: AxiosError<KnownError> = e as any;
-            console.log(error.message);
+            alert(error.message);
         }
     },
 );
