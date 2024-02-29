@@ -1,4 +1,23 @@
-.h{
-    color: aqua;
-    background-color: beige;
+h2{
+    font-size: 16px;
+    font-weight: 400;
 }
+.avg_box{
+    color: #667985;
+    text-align: center;
+    .avg_box__spanValue{
+        color:#F38B00;
+        font-size: 48px;
+        line-height: 72px;
+    }
+    .avg_box_group{
+        display: inline-flex;
+        align-items: baseline;
+        gap: 10px;
+    }
+    .avg_box__p{
+        font-size: 20px;
+    }
+
+}
+

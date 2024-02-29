@@ -1,0 +1,14 @@
+.container_main{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    .container_main__box{
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .container_main__btn{
+        display: flex;
+        justify-content: flex-end;
+    }
+}

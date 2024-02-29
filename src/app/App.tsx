@@ -1,8 +1,11 @@
 import MainPage from 'pages/MainPage/UI/MainPage';
-import "./styles/index.scss"
+import "./styles/index.scss";
+import { Theme, presetGpnDefault } from '@consta/uikit/Theme';
 function App() {
   return <div className="app">
-    <MainPage />
+    <Theme preset={presetGpnDefault}>
+      <MainPage />
+    </Theme>
   </div>;
 }
 

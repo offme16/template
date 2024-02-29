@@ -13,8 +13,9 @@ const AverageValue: React.FC<AvgValue> = (props) => {
     const averageValue = calculateAverage(props.filteredData);
 
     return (
-        <div className={style.h}>
-            <span>{averageValue} р</span>
+        <div className={style.avg_box}>
+            <h2>Среднее за период</h2>
+            <div className={style.avg_box_group}><span className={style.avg_box__spanValue}>{averageValue}</span><p className={style.avg_box__p}>₽</p></div>
         </div>
     )
 } 
