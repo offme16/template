@@ -4,6 +4,7 @@ interface AvgValue {
 }
 
 const AverageValue: React.FC<AvgValue> = (props) => {
+    //НАХОЖДЕНИЕ СРЕДНЕГО ЗНАЧЕНИЯ 
     const calculateAverage = (data: any[]) => {
         if (!data || data.length === 0) return 0;
         const sum = data.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0);

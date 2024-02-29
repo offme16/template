@@ -15,14 +15,15 @@ const MainPage = () => {
     const [selectedSymbol, setSelectedSymbol] = useState<string>("$");
     const data = useSelector(getResult);
 
+    //Асинхронный запрос
     useEffect(() => {
         dispatch(getCurrency());
     }, [dispatch]);
-
+     // Фильтрация данных по выбранному индикатору
     const filteredData = data?.filter(item => item.indicator.toLocaleUpperCase() === selectedIndicator);
-
+    //Нахождение минимального значения для оси Y
     const minValue = filteredData ? Math.min(...filteredData.map(item => item.value)) : undefined;
-    
+    //Надстройка для граффа
     const options = {
         title: {
             text: `${selectedIndicator}, ${selectedSymbol}/P`,
@@ -47,10 +48,10 @@ const MainPage = () => {
             },
             maxInterval: 4,
             minInterval: 2,
-            min: minValue,
+            min: minValue, // Установка минимального значения оси Y
         },
         tooltip: {
-            trigger: 'axis',
+            trigger: 'axis', // Триггер для отображения всплывающей подсказки
             formatter: ' <strong style="color: black;">{b}</strong><br/> {a} : {c} <strong style="color: black;"> P</strong>',
         },
         

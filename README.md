@@ -4,13 +4,17 @@
 3. Переключение курсов валют
 4. Компоненты из библиотеки Consta UI Kit
 
-В рамках данного тестового задания реализовано небольшое React-приложение с использованием библиотеки [**echarts.js**](https://echarts.apache.org/en/index.html) и библиотеки компонентов [**Consta UI Kit**](https://consta.design/libs/uikit).
+В рамках данного тестового задания реализовано небольшое React-приложение с использованием FSD-архитектуры [**FSD**](https://feature-sliced.design/ru/docs/get-started/overview),  библиотеки [**echarts.js**](https://echarts.apache.org/en/index.html) и библиотеки компонентов [**Consta UI Kit**](https://consta.design/libs/uikit).
 
-В качестве эндпоинта использовал сервис [**mockAPI**](https://mockapi.io/)
+В качестве эндпоинта использовал сервис [**mockAPI**](https://64ad3ed7b470006a5ec59979.mockapi.io/api/v1/collection)
 
-Написанный код нужно залить на Github и в обратном письме выслать ссылку на репозиторий (обязательное проверьте, чтобы репозиторий был открытым).
+API: Создание экземпляра Axios с указанием базового URL [shared/api/api.ts].
+     Ассинхронный get запрос [entities/currency/model/asynkThunk/currencyAsyncThunk.ts].
+     Данный запрос вызывается на главной компоненте MainPage[pages/MainPage/UI/MainPage.tsx].
 
+ReactECharts: в компоненте MainPage[pages/MainPage/UI/MainPage.tsx] расписаны надстройки для граффа.
 
-<p align="left">
- <img width="250" src="./assets/coter.jpg" alt="jpg"/>
-</p>
+AverageValue: компонента для нахождения среднего значения, пропсами принимает фильтрованный объект.[widgets/avgValue/UI/AverageValue]
+
+ChoiceBtn: компонента для кнопок переключения валют созданный с помощью библиотеки Consta UI Kit. Выбранный символ валюты передаются через props в родительский компонент.[widgets/choiceGroup/UI/ChoiceBtn]
+

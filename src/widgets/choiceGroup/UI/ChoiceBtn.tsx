@@ -5,7 +5,7 @@ type Item = {
     name: string;
     value: string;
 };
-
+//Варианты выбора валюты
 const items: Item[] = [
     {
         name: '$',
@@ -28,7 +28,7 @@ interface ChoiceBtnProps {
 
 const ChoiceBtn: React.FC<ChoiceBtnProps> = ({ setSelectedIndicator,setSelectedSymbol }) => {
   const [value, setValue] = useState<Item | null>(items[0]);
-
+//Функция обработки изменения выбранного элемента
   const handleOnChange = (newValue: Item) => {
     setValue(newValue);
     setSelectedIndicator(newValue.value);
