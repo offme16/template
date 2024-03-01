@@ -18,3 +18,4 @@ AverageValue: компонента для нахождения среднего 
 
 ChoiceBtn: компонента для кнопок переключения валют созданный с помощью библиотеки Consta UI Kit. Выбранный символ валюты передаются через props в родительский компонент.[widgets/choiceGroup/UI/ChoiceBtn]
 
+Проект доступен по ссылке https://offme16.github.io/template/
